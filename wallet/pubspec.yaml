@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   qmlkit:
-    path: "../../../QMLKit/flutter/qmlkit"
+    path: "qmlkit"
   crypto: ^3.0.1
   bip39: ^1.0.6
 
