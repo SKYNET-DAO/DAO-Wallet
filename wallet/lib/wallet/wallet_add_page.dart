@@ -4,10 +4,7 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
-import 'package:qmlkit/button/text_btn.dart';
-import 'package:qmlkit/button/theme_button.dart';
-import 'package:qmlkit/qmlkit.dart';
-import 'package:qmlkit/widgets/toast.dart';
+import 'package:qm_widget/qm_widget.dart';
 import 'package:wallet/main_page.dart';
 import 'package:wallet/storage/data_storage.dart';
 import 'package:wallet/style/app_color.dart';
@@ -52,8 +49,10 @@ class _WalletAddPageState extends State<WalletAddPage> {
   }
 
   void generateWallet() async {
-    QML.showLoading();
-    String mnemonic = generateMnemonic();
+    QM.showLoading();
+    // String mnemonic = generateMnemonic();
+    String mnemonic =
+        "process forget believe wealth tennis ski radio coral swim home clay topple";
     Wallet wallet = Wallet.fromMnemonic(mnemonic);
     wallet.multiple = true;
     wallet.tokens = [
@@ -91,7 +90,7 @@ class _WalletAddPageState extends State<WalletAddPage> {
     String hash = md5.convert(utf8.encode(mnemonic)).toString();
     bool success = (await DataStorage.setWallet(hash, wallet)) &&
         (await DataStorage.setLatestKey(hash));
-    QML.dismissLoading();
+    QM.dismissLoading();
     if (success) {
       Toast.show("Create Successful");
       App.replace(MainPage());

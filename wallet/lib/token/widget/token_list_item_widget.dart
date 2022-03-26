@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wallet/style/app_color.dart';
 import 'package:wallet/token/token.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
 
 class TokenListItemWidget extends StatefulWidget {
   final Token token;

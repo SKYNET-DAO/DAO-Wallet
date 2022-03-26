@@ -4,9 +4,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:qmlkit/pub/app.dart';
+import 'package:qm_widget/qm_widget.dart';
 import 'package:wallet/launch_page.dart';
-import 'package:wallet/main_page.dart';
 
 void main() {
   if (Platform.isAndroid) {

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
 import 'package:wallet/main_page.dart';
 import 'package:wallet/storage/data_storage.dart';
 import 'package:wallet/style/app_color.dart';

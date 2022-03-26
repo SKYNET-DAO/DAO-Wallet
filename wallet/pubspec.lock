@@ -8,6 +8,34 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.8.2"
+  base32:
+    dependency: transitive
+    description:
+      name: base32
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.1"
+  base58check:
+    dependency: transitive
+    description:
+      name: base58check
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.0"
+  bech32:
+    dependency: transitive
+    description:
+      name: bech32
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.1"
+  bip32:
+    dependency: transitive
+    description:
+      name: bip32
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.0"
   bip39:
     dependency: "direct main"
     description:
@@ -15,6 +43,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.6"
+  blake2b:
+    dependency: transitive
+    description:
+      name: blake2b
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -22,6 +57,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.0"
+  bs58check:
+    dependency: transitive
+    description:
+      name: bs58check
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.2"
   characters:
     dependency: transitive
     description:
@@ -71,6 +113,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.4"
+  dart_bip32_bip44:
+    dependency: transitive
+    description:
+      name: dart_bip32_bip44
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.0"
   dio:
     dependency: transitive
     description:
@@ -99,6 +148,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "6.1.2"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -275,48 +331,57 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "6.0.2"
-  qmlkit:
+  qm_widget:
     dependency: "direct main"
     description:
-      path: qmlkit
-      relative: true
-    source: path
+      path: "qm_widget_example/qm_widget"
+      ref: a06cd3ee34b06b57c78900c59a43106e73ccc2f7
+      resolved-ref: a06cd3ee34b06b57c78900c59a43106e73ccc2f7
+      url: "https://github.com/myron6520/QMWidget.git"
+    source: git
     version: "0.0.1"
+  secp256k1:
+    dependency: transitive
+    description:
+      name: secp256k1
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.0"
   shared_preferences:
     dependency: transitive
     description:
       name: shared_preferences
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.12"
+    version: "2.0.13"
   shared_preferences_android:
     dependency: transitive
     description:
       name: shared_preferences_android
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.10"
+    version: "2.0.11"
   shared_preferences_ios:
     dependency: transitive
     description:
       name: shared_preferences_ios
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.9"
+    version: "2.1.0"
   shared_preferences_linux:
     dependency: transitive
     description:
       name: shared_preferences_linux
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.4"
+    version: "2.1.0"
   shared_preferences_macos:
     dependency: transitive
     description:
       name: shared_preferences_macos
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.3"
   shared_preferences_platform_interface:
     dependency: transitive
     description:
@@ -337,7 +402,7 @@ packages:
       name: shared_preferences_windows
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.4"
+    version: "2.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -399,20 +464,29 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.1"
+  wallet_util:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: bb412a235fd79b806f9b83f5f58e5088409eddd5
+      url: "https://github.com/myron6520/wallet_util.git"
+    source: git
+    version: "0.0.1"
   win32:
     dependency: transitive
     description:
       name: win32
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.3.8"
+    version: "2.4.4"
   xdg_directories:
     dependency: transitive
     description:
       name: xdg_directories
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.0"
+    version: "0.2.0+1"
   xml:
     dependency: transitive
     description:
@@ -421,5 +495,5 @@ packages:
     source: hosted
     version: "5.3.1"
 sdks:
-  dart: ">=2.15.1 <3.0.0"
-  flutter: ">=2.5.0"
+  dart: ">=2.16.1 <3.0.0"
+  flutter: ">=2.8.0"

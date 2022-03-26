@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:wallet/style/app_color.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
 import 'package:wallet/wallet/wallet_list_page.dart';
 
 class SettingsWidget extends StatefulWidget {

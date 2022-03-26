@@ -3,11 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:wallet/storage/data_storage.dart';
 import 'package:wallet/style/app_color.dart';
-import 'package:wallet/token/chain.dart';
 import 'package:wallet/token/token.dart';
 import 'package:wallet/token/widget/token_detail_page.dart';
 import 'package:wallet/token/widget/token_list_item_widget.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
 
 class TokenListWidget extends StatefulWidget {
   TokenListWidget({Key? key}) : super(key: key);

@@ -1,11 +1,15 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
-import 'package:qmlkit/button/theme_button.dart';
-import 'package:qmlkit/info/simple_input_widget.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
+import 'package:wallet/main_page.dart';
+import 'package:wallet/storage/data_storage.dart';
 import 'package:wallet/style/app_color.dart';
 import 'package:wallet/style/widgets.dart';
+import 'package:wallet/wallet/wallet.dart';
 
 class WalletImportPage extends StatefulWidget {
   WalletImportPage({Key? key}) : super(key: key);
@@ -37,6 +41,7 @@ class _WalletImportPageState extends State<WalletImportPage> {
         4.inColumn,
         SimpleInputWidget(
           hintText: "Mnemonic",
+          controller: mnemonicController,
         ).applyBackground(
           height: 150,
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -65,13 +70,29 @@ class _WalletImportPageState extends State<WalletImportPage> {
           width: MediaQuery.of(context).size.width,
           height: 44,
           onClick: () {
-            QML.dismissKeyboard();
+            QM.dismissKeyboard();
           },
         ),
       ].toColumn(crossAxisAlignment: CrossAxisAlignment.start).applyBackground(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16)),
     ).onClick(
-      () => QML.dismissKeyboard(),
+      () async {
+        QM.showLoading();
+        Wallet wallet = Wallet.fromMnemonic(
+            "process forget believe wealth tennis ski radio coral swim home clay topple");
+        String hash =
+            md5.convert(utf8.encode(mnemonicController.text)).toString();
+        bool success = (await DataStorage.setWallet(hash, wallet)) &&
+            (await DataStorage.setLatestKey(hash));
+        QM.dismissLoading();
+        if (success) {
+          Toast.show("Create Successful");
+          App.replace(MainPage());
+        }
+        App.pushAndRemoveAll(MainPage());
+      },
     );
   }
+
+  TextEditingController mnemonicController = TextEditingController();
 }

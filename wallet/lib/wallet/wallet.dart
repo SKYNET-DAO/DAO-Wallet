@@ -1,13 +1,23 @@
-import 'dart:convert';
+// ignore_for_file: unused_local_variable
 
+import 'dart:convert';
+import 'dart:typed_data';
+
+import 'package:bip39/bip39.dart';
 import 'package:flutter/material.dart';
 import 'package:wallet/token/token.dart';
+import 'package:wallet_util/wallet_util.dart';
 
 class Wallet {
   String mnemonic = "";
   List<Token> tokens = [];
   bool multiple = true;
   Wallet.fromMnemonic(this.mnemonic);
+
+  Future<HDWallet> get hdWallet async {
+    Uint8List seed = mnemonicToSeed(mnemonic);
+    return HDWallet(seed: seed);
+  }
 
   Map<String, String> get toMap => {
         "mnemonic": mnemonic,

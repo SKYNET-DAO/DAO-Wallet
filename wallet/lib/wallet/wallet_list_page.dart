@@ -1,9 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
-import 'package:wallet/style/app_style.dart';
 import 'package:wallet/style/widgets.dart';
-import 'package:qmlkit/qmlkit.dart';
+import 'package:qm_widget/qm_widget.dart';
 import 'package:wallet/wallet/wallet_add_page.dart';
 
 class WalletListPage extends StatefulWidget {
